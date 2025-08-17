@@ -3,31 +3,29 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Virat Kohli — Profile</title>
-  <meta name="description" content="A clean, single‑file HTML profile page for Virat Kohli." />
+  <title>MS Dhoni — Profile</title>
+  <meta name="description" content="A clean, single‑file HTML profile page for MS Dhoni." />
   <style>
     :root{
-      --bg:#0a0b0e; --card:#12141a; --muted:#9aa3b2; --text:#e6edf3; --accent:#00d2ff; --accent2:#3a7bd5;
-      --ring:rgba(0,210,255,.25);
+      --bg:#0a0b0e; --card:#12141a; --muted:#9aa3b2; --text:#e6edf3; --accent:#ffcc00; --accent2:#ff9900;
+      --ring:rgba(255,204,0,.25);
     }
     *{box-sizing:border-box}
     html,body{margin:0;height:100%;background:linear-gradient(180deg,#0a0b0e 0%,#0c1016 100%);color:var(--text);font:500 16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif}
     a{color:var(--accent)}
     .container{max-width:1100px;margin:0 auto;padding:24px}
-    .hero{position:relative;overflow:hidden;border-radius:24px;padding:36px;background:radial-gradient(1200px 400px at 10% -10%,rgba(0,210,255,.15),transparent),linear-gradient(135deg,#0f1320,#0e1118)}
-    .hero::after{content:"";position:absolute;inset:-2px;border-radius:26px;padding:1px;background:linear-gradient(90deg,transparent,rgba(0,210,255,.35),transparent);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
+    .hero{position:relative;overflow:hidden;border-radius:24px;padding:36px;background:radial-gradient(1200px 400px at 10% -10%,rgba(255,204,0,.15),transparent),linear-gradient(135deg,#0f1320,#0e1118)}
+    .hero::after{content:"";position:absolute;inset:-2px;border-radius:26px;padding:1px;background:linear-gradient(90deg,transparent,rgba(255,204,0,.35),transparent);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
     .title{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
-    .title h1{margin:0;font-size:clamp(28px,5vw,44px);letter-spacing:.5px}
+    .title h1{margin:0;font-size:clamp(32px,6vw,52px);letter-spacing:.5px}
     .title .badge{font-size:12px;border:1px solid rgba(255,255,255,.12);padding:6px 10px;border-radius:999px;color:var(--muted);backdrop-filter:blur(6px)}
     .subtitle{margin:8px 0 0;color:var(--muted)}
+    .profile-photo{margin-top:20px;max-width:280px;border-radius:20px;overflow:hidden;box-shadow:0 8px 20px rgba(0,0,0,.4)}
+    .profile-photo img{width:100%;display:block}
 
     .grid{display:grid;gap:16px;margin-top:22px;grid-template-columns:repeat(12,1fr)}
     .card{grid-column:span 12;background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:18px;padding:18px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
     @media(min-width:760px){.span-4{grid-column:span 4}.span-8{grid-column:span 8}.span-6{grid-column:span 6}.span-3{grid-column:span 3}}
-
-    .kpi{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;align-items:center}
-    .kpi .label{color:var(--muted);font-size:12px}
-    .kpi .value{font-size:18px}
 
     .chips{display:flex;flex-wrap:wrap;gap:8px}
     .chip{border:1px solid rgba(255,255,255,.1);padding:6px 10px;border-radius:999px;color:#d5dde7;font-size:13px}
@@ -41,116 +39,69 @@
     .event::before{content:"";position:absolute;left:-1px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 6px var(--ring)}
     .event .when{font-size:12px;color:var(--muted)}
 
-    .gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
-    .gallery .ph{aspect-ratio:16/10;border-radius:12px;background:#0e131c;border:1px dashed rgba(255,255,255,.15);display:grid;place-items:center;color:#9fb3c8;font-size:13px}
-
     .footer{margin-top:22px;color:var(--muted);font-size:13px;text-align:center}
     .btn{appearance:none;border:0;background:linear-gradient(90deg,var(--accent),var(--accent2));color:#001018;border-radius:999px;padding:10px 14px;font-weight:700}
-    .stack{display:flex;flex-wrap:wrap;gap:10px}
   </style>
 </head>
 <body>
   <div class="container">
     <header class="hero">
       <div class="title">
-        <h1>Virat Kohli</h1>
-        <span class="badge">Indian Cricketer • Right‑hand bat</span>
-        <span class="badge">Born 5 Nov 1988, Delhi</span>
+        <h1>MS Dhoni</h1>
+        <span class="badge">Indian Cricketer • Wicketkeeper‑batter</span>
+        <span class="badge">Born 7 July 1981, Ranchi</span>
       </div>
-      <p class="subtitle">Widely regarded as  GDVDF one of the most complete modern batters, Virat Kohli blends classical technique with fearless intent and relentless fitness standards.</p>
-      <div class="grid">
-        <section class="card span-8">
-          <h2>About</h2>
-          <p>VIRAT Kohli is a professional cricketer who plays for India and Royal Challengers Bangalore. A prolific run‑scorer across formats, he has earned accolades for consistency, passion, and leadership. Off the field, he is known for philanthropy, entrepreneurial ventures, and setting new benchmarks for training and discipline.</p>
-          <div class="chips" style="margin-top:10px">
-            <span class="chip">Top‑order batter</span>
-            <span class="chip">Former India captain</span>
-            <span class="chip">RCB (IPL)</span>
-            <span class="chip">Fitness icon</span>
-          </div>
-        </section>
-        <aside class="card span-4">
-          <h2>Quick Facts</h2>
-          <div class="kpi"><span class="label">Full name</span><span class="value">Virat Kohli</span></div>
-          <div class="kpi"><span class="label">Role</span><span class="value">Batter</span></div>
-          <div class="kpi"><span class="label">Batting</span><span class="value">Right‑handed</span></div>
-          <div class="kpi"><span class="label">Bowling</span><span class="value">Right‑arm medium</span></div>
-          <div class="kpi"><span class="label">Teams</span><span class="value">India • Delhi • RCB</span></div>
-        </aside>
+      <p class="subtitle">MS Dhoni, also known as “Captain Cool,” is celebrated for his calm leadership, sharp wicketkeeping, and finishing ability. He led India to multiple ICC trophies and transformed Indian cricket with his tactical acumen and composure.</p>
+      <div class="profile-photo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/MS_Dhoni_in_Jan_2016_%28cropped%29.jpg" alt="MS Dhoni" />
       </div>
     </header>
 
     <main class="grid">
       <section class="card span-8">
-        <h2>Career Highlights</h2>
-        <ul>
-          <li>Led India U‑19 to the ICC U‑19 World Cup title (2008).</li>
-          <li>Made ODI debut in 2008; Test debut in 2011.</li>
-          <li>Captained India across formats, ushering a high‑fitness, aggressive brand of cricket.</li>
-          <li>Recipient of multiple ICC awards including the Sir Garfield Sobers Trophy.</li>
-          <li>Holds numerous batting records across formats and in the IPL.</li>
-        </ul>
-      </section>
-
-      <section class="card span-4">
-        <h2>Signature Traits</h2>
-        <div class="stack">
-          <span class="chip">Chase master</span>
-          <span class="chip">Cover‑drive elegance</span>
-          <span class="chip">High intensity</span>
-          <span class="chip">Leadership</span>
-          <span class="chip">Fielding excellence</span>
+        <h2>About</h2>
+        <p>Mahendra Singh Dhoni is a legendary cricketer from India, renowned for his success as a captain and finisher. He is the only captain to have won all three major ICC trophies: T20 World Cup (2007), ODI World Cup (2011), and Champions Trophy (2013). Known for his helicopter shot and sharp game sense, Dhoni remains an icon of Indian cricket.</p>
+        <div class="chips" style="margin-top:10px">
+          <span class="chip">Captain Cool</span>
+          <span class="chip">World Cup Winner</span>
+          <span class="chip">CSK (IPL)</span>
+          <span class="chip">Wicketkeeper legend</span>
         </div>
       </section>
+      <aside class="card span-4">
+        <h2>Quick Facts</h2>
+        <p><strong>Full name:</strong> Mahendra Singh Dhoni</p>
+        <p><strong>Role:</strong> Wicketkeeper‑batter</p>
+        <p><strong>Batting:</strong> Right‑handed</p>
+        <p><strong>Bowling:</strong> Right‑arm medium</p>
+        <p><strong>Teams:</strong> India • Jharkhand • CSK</p>
+      </aside>
 
       <section class="card span-6">
-        <h2>Timeline</h2>
+        <h2>Career Timeline</h2>
         <div class="timeline">
-          <div class="event">
-            <div class="when">2008</div>
-            U‑19 World Cup‑winning captain; ODI debut for India.
-          </div>
-          <div class="event">
-            <div class="when">2011</div>
-            Test debut; part of India’s ODI World Cup‑winning squad.
-          </div>
-          <div class="event">
-            <div class="when">2014–16</div>
-            Establishes supremacy across formats with prolific hundreds worldwide.
-          </div>
-          <div class="event">
-            <div class="when">2017–2021</div>
-            Full‑time captain; Test team achieves historic away wins.
-          </div>
-          <div class="event">
-            <div class="when">2016–present</div>
-            Mainstay and marquee player for RCB in the IPL.
-          </div>
+          <div class="event"><div class="when">2004</div> ODI debut vs Bangladesh.</div>
+          <div class="event"><div class="when">2007</div> Captained India to T20 World Cup victory.</div>
+          <div class="event"><div class="when">2011</div> Hit winning six in ODI World Cup final; India crowned champions.</div>
+          <div class="event"><div class="when">2013</div> Won ICC Champions Trophy as captain.</div>
+          <div class="event"><div class="when">2008–2023</div> Iconic captain of Chennai Super Kings in IPL, leading them to multiple titles.</div>
         </div>
       </section>
 
       <section class="card span-6">
-        <h2>Gallery (placeholders)</h2>
-        <div class="gallery">
-          <div class="ph">Add match photo</div>
-          <div class="ph">Add celebration photo</div>
-          <div class="ph">Add training photo</div>
-          <div class="ph">Add RCB photo</div>
+        <h2>Signature Traits</h2>
+        <div class="chips">
+          <span class="chip">Helicopter shot</span>
+          <span class="chip">Finisher</span>
+          <span class="chip">Captain Cool</span>
+          <span class="chip">Sharp wicketkeeping</span>
+          <span class="chip">Strategic mind</span>
         </div>
-        <p style="margin-top:10px;color:var(--muted)">Replace the placeholders with your images by putting <code>&lt;img src="..." alt="..." /&gt;</code> inside each box.</p>
       </section>
 
       <section class="card span-12">
-        <h2>Notable Records & Honours</h2>
-        <p>This section intentionally avoids fast‑changing numbers. You can add current stats later. Common highlights include multiple ICC awards, record‑breaking run chases, and milestone centuries across formats and in the IPL.</p>
-      </section>
-
-      <section class="card span-12" style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between">
-        <div>
-          <h2 style="margin:0 0 6px">Want to customize?</h2>
-          <p style="margin:0;color:var(--muted)">Swap colors, add images, or embed recent statistics easily—this is a single file with no external dependencies.</p>
-        </div>
-        <a class="btn" href="#" onclick="window.print();return false;">Print / Save as PDF</a>
+        <h2>Honours & Legacy</h2>
+        <p>Dhoni is widely respected as one of the greatest captains in cricket history. Under his leadership, India became a dominant force across formats. He inspired millions with his calm approach, resilience, and ability to deliver in pressure situations.</p>
       </section>
     </main>
 
