@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Big HTML Project | Full Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===================== CSS ===================== -->
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #1e293b;
+            --light: #f8fafc;
+            --dark: #020617;
+            --text: #334155;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: var(--light);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* ---------- Navbar ---------- */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--secondary);
+            color: white;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #38bdf8;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        nav ul li a:hover {
+            color: #38bdf8;
+        }
+
+        .toggle-btn {
+            cursor: pointer;
+            padding: 6px 10px;
+            border-radius: 5px;
+            background: #0f172a;
+            font-size: 14px;
+        }
+
+        /* ---------- Hero ---------- */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(120deg, #2563eb, #38bdf8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 40px;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .hero button {
+            margin-top: 25px;
+            padding: 12px 25px;
+            border: none;
+            background: white;
+            color: #2563eb;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* ---------- Sections ---------- */
+        section {
+            padding: 80px 40px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            color: var(--secondary);
+        }
+
+        /* ---------- About ---------- */
+        .about {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* ---------- Services ---------- */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* ---------- Skills ---------- */
+        .skill {
+            margin-bottom: 20px;
+        }
+
+        .skill span {
+            font-weight: bold;
+        }
+
+        .progress {
+            background: #e5e7eb;
+            border-radius: 20px;
+            overflow: hidden;
+            height: 12px;
+        }
+
+        .progress div {
+            height: 100%;
+            background: var(--primary);
+        }
+
+        /* ---------- Projects ---------- */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .project {
+            background: #f1f5f9;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* ---------- Testimonials ---------- */
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        /* ---------- Contact ---------- */
+        .contact-form {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #cbd5e1;
+        }
+
+        .contact-form button {
+            padding: 12px;
+            width: 100%;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* ---------- Footer ---------- */
+        footer {
+            background: var(--secondary);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* ---------- Dark Mode ---------- */
+        body.dark {
+            background: var(--dark);
+            color: #e5e7eb;
+        }
+
+        body.dark section {
+            background: #020617;
+        }
+
+        body.dark .service-card,
+        body.dark .testimonial,
+        body.dark .project {
+            background: #020617;
+            border: 1px solid #1e293b;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<header>
+    <div class="navbar">
+        <div class="logo">BigHTML</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="toggle-btn" onclick="toggleMode()">🌙</div>
+    </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="home">
+    <div>
+        <h1>Big HTML Website</h1>
+        <p>A complete single-file HTML project with CSS & JavaScript included.</p>
+        <button onclick="alert('Welcome!')">Get Started</button>
+    </div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section id="about">
+    <div class="section-title">
+        <h2>About Me</h2>
+    </div>
+    <div class="about">
+        <img src="https://via.placeholder.com/500" alt="About Image">
+        <div>
+            <p>
+                I am a passionate web developer creating modern and responsive websites.
+                This is a large HTML file example useful for practice, demos, and projects.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== SERVICES ===================== -->
+<section id="services">
+    <div class="section-title">
+        <h2>Services</h2>
+    </div>
+    <div class="services">
+        <div class="service-card">Web Development</div>
+        <div class="service-card">Cloud Deployment</div>
+        <div class="service-card">UI/UX Design</div>
+        <div class="service-card">SEO Optimization</div>
+    </div>
+</section>
+
+<!-- ===================== SKILLS ===================== -->
+<section id="skills">
+    <div class="section-title">
+        <h2>Skills</h2>
+    </div>
+
+    <div class="skill">
+        <span>HTML</span>
+        <div class="progress"><div style="width:90%"></div></div>
+    </div>
+
+    <div class="skill">
+        <span>CSS</span>
+        <div class="progress"><div style="width:85%"></div></div>
+    </div>
+
+    <div class="skill">
+        <span>JavaScript</span>
+        <div class="progress"><div style="width:80%"></div></div>
+    </div>
+</section>
+
+<!-- ===================== PROJECTS ===================== -->
+<section id="projects">
+    <div class="section-title">
+        <h2>Projects</h2>
+    </div>
+    <div class="projects">
+        <div class="project">Project One</div>
+        <div class="project">Project Two</div>
+        <div class="project">Project Three</div>
+        <div class="project">Project Four</div>
+    </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section id="contact">
+    <div class="section-title">
+        <h2>Contact Me</h2>
+    </div>
+    <form class="contact-form">
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea rows="5" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+    <p>© 2026 Big HTML Project | All Rights Reserved</p>
+</footer>
+
+<!-- ===================== JAVASCRIPT ===================== -->
+<script>
+    function toggleMode() {
+        document.body.classList.toggle("dark");
+    }
+</script>
+
+</body>
+</html>
